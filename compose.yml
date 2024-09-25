@@ -1,0 +1,23 @@
+
+services:
+  backend-yt-app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    networks:
+      - yt-ai-net
+    ports:
+      - 8001:8001
+
+  frontend-yt-app:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    networks:
+      - yt-ai-net
+    ports:
+      - 3000:80
+
+networks:
+  yt-ai-net:
+    driver: bridge
