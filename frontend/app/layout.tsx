@@ -1,9 +1,6 @@
 import "./css/style.css";
 
 import { Inter } from "next/font/google";
-import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
-import Provider from "./client-provider";
 
 
 const inter = Inter({
@@ -22,14 +19,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
 
   return (
     <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
       >
-        <Provider session={session}>{children}</Provider>
+        {children}
       </body>
     </html>
   );
