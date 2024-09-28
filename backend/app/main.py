@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # Routing
-app.include_router(users.app, prefix="/notifications", tags=["user"], dependencies=[Depends(security.get_api_key)])
+app.include_router(users.app, prefix="/users", tags=["user"], dependencies=[Depends(security.get_api_key)])
 
 
 @app.get("/")
@@ -29,4 +29,4 @@ async def root():
 # Run the FastAPI application
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run('app.main:app', host="0.0.0.0", port=8002, reload=False, log_level="debug")
+    uvicorn.run('app.main:app', host="0.0.0.0", port=8001, reload=False, log_level="debug")

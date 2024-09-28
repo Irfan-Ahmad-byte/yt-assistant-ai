@@ -9,7 +9,7 @@ load_dotenv(find_dotenv())
 
 @dataclass
 class Config:
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
     API_KEY = os.getenv("API_KEY")
     TOKEN = os.getenv("TOKEN")
     ORIGINS = json.loads(os.getenv("ORIGINS"))
-    DATABASE_URL = os.getenv("DATABASE_URL")
