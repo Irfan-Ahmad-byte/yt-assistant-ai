@@ -6,15 +6,18 @@ export default function Footer({ border = false }: { border?: boolean }) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Top area: Blocks */}
         <div
-          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
+          className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${
+            border
+              ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]"
+              : ""
+          }`}
         >
-
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
             <ul className="flex gap-1">
               <li>
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
-                  href="#0"
+                  href="https://x.com/IrfanAhmad1707"
                   aria-label="Twitter"
                 >
                   <svg
@@ -29,7 +32,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
-                  href="#0"
+                  href="https://medium.com/@irfan-ahmad"
                   aria-label="Medium"
                 >
                   <svg
@@ -44,7 +47,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
-                  href="#0"
+                  href="https://github.com/irfan-ahmad-byte"
                   aria-label="Github"
                 >
                   <svg
@@ -56,11 +59,25 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   </svg>
                 </Link>
               </li>
+              <li>
+                <Link
+                  className="flex items-center justify-center text-blue-500 transition hover:text-blue-600"
+                  href="https://www.linkedin.com/in/irfanahmad-com/"
+                  aria-label="LinkedIn"
+                >
+                  <svg
+                    className="h-8 w-8 fill-current"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M27 3H5a2 2 0 0 0-2 2v22a2 2 0 0 0 2 2h22a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM12 24H8V13h4v11zm-2-12a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm14 12h-4v-5.6c0-1.4-.03-3.1-1.9-3.1-1.9 0-2.2 1.5-2.2 3v5.7h-4V13h3.8v1.5h.05a4.2 4.2 0 0 1 3.75-2c4 0 4.75 2.6 4.75 6v5.5z"></path>
+                  </svg>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-      
     </footer>
   );
 }
