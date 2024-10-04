@@ -6,15 +6,17 @@ export const metadata = {
 import UrlInput from "@/components/url_input";
 import TextInput from "@/components/text_input";
 import ResponseBox from "@/components/response_box";
+import StreamedResponseComponent from "@/components/streamer";
 
 export default function Home() {
   return (
     <>
       <UrlInput />
-      <div className="flex flex-col justify-between w-full h-full">
+      {/* <div className="flex flex-col justify-between w-full h-full">
         <ResponseBox />
         <TextInput />
-      </div>
+      </div> */}
+      <StreamedResponseComponent />
     </>
   );
 }

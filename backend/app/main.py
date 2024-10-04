@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from app.config.config import Config
-from app.routers import users
+from app.routers import agent
 from app.dependencies import security
 
 
@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # Routing
-app.include_router(users.app, prefix="/users", tags=["user"], dependencies=[Depends(security.get_api_key)])
+app.include_router(agent.app, prefix="/agent", tags=["YT agent"], dependencies=[Depends(security.get_api_key)])
 
 
 @app.get("/")
