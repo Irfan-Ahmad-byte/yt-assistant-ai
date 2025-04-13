@@ -1,0 +1,86 @@
+
+2024-10-10 21:18:16.382593  Neo4j Driver version - 5.25.0
+
+2024-10-10 21:18:16.382768  Attempting to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+s as user "neo4j"
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:18:16.387966  Exception on first try with neo4j+s - Cannot resolve address neo4j+ssc:7687
+
+2024-10-10 21:18:16.388137  Retrying to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+ssc.
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:18:16.389429  Connection to "neo4j+ssc://79d4aea2.databases.neo4j.io" failed with neo4j+ssc as well. Exception: Cannot resolve address neo4j+ssc:7687
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+
+2024-10-10 21:19:20.653652  Neo4j Driver version - 5.25.0
+
+2024-10-10 21:19:20.653843  Attempting to connect to "79d4aea2" using neo4j+s as user "neo4j"
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('79d4aea2.databases.neo4j.io', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('79d4aea2.databases.neo4j.io', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: 79d4aea2.databases.neo4j.io:7687
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> dns resolver out: 34.126.64.110:7687
+DEBUG:neo4j.pool:[#0000]  _: <POOL> _acquire router connection, database=None, address=ResolvedIPv4Address(('34.126.64.110', 7687))
+DEBUG:neo4j.pool:[#0000]  _: <POOL> trying to hand out new connection
+DEBUG:neo4j.io:[#0000]  C: <OPEN> 34.126.64.110:7687
+DEBUG:neo4j.io:[#E7A0]  C: <SECURE> 79d4aea2.databases.neo4j.io
+DEBUG:neo4j.io:[#E7A0]  C: <MAGIC> 0x6060B017
+DEBUG:neo4j.io:[#E7A0]  C: <HANDSHAKE> 0x00060605 0x00020404 0x00000104 0x00000003
+DEBUG:neo4j.io:[#E7A0]  S: <HANDSHAKE> 0x00000605
+DEBUG:neo4j.io:[#E7A0]  C: HELLO {'user_agent': 'neo4j-python/5.25.0 Python/3.12.5-final-0 (linux)', 'routing': {'address': '79d4aea2.databases.neo4j.io:7687'}, 'bolt_agent': {'product': 'neo4j-python/5.25.0', 'platform': 'Linux 5.15.0-122-generic; x86_64', 'language': 'Python/3.12.5-final-0', 'language_details': 'CPython; 3.12.5-final-0 (main, Aug 13 2024 02:17:09) [GCC 10.2.1 20210110]'}}
+DEBUG:neo4j.io:[#E7A0]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG:neo4j.io:[#E7A0]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG:neo4j.io:[#E7A0]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG:neo4j.io:[#E7A0]  S: SUCCESS {'server': 'Neo4j/5.24-aura', 'connection_id': 'bolt-18515', 'hints': {'connection.recv_timeout_seconds': 60, 'telemetry.enabled': True}}
+DEBUG:neo4j.io:[#E7A0]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG:neo4j.io:[#E7A0]  S: SUCCESS {}
+DEBUG:neo4j.io:[#E7A0]  _: <CONNECTION> server state: AUTHENTICATION > READY
+DEBUG:neo4j.io:[#E7A0]  C: ROUTE {'address': '79d4aea2.databases.neo4j.io:7687'} () {}
+DEBUG:neo4j.io:[#E7A0]  S: SUCCESS {'rt': {'servers': [{'addresses': ['79d4aea2.databases.neo4j.io:7687'], 'role': 'WRITE'}, {'addresses': ['79d4aea2.databases.neo4j.io:7687'], 'role': 'READ'}, {'addresses': ['79d4aea2.databases.neo4j.io:7687'], 'role': 'ROUTE'}], 'ttl': 10, 'db': 'neo4j'}}
+DEBUG:neo4j.pool:[#E7A0]  _: <POOL> released bolt-18515
+DEBUG:neo4j.pool:[#0000]  _: <ROUTING> updated table=RoutingTable(database='neo4j', routers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, readers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, writers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, last_updated_time=27270.073168096, ttl=10)
+DEBUG:neo4j.pool:[#0000]  _: <POOL> update routing table from address=ResolvedIPv4Address(('34.126.64.110', 7687)) (RoutingTable(database='neo4j', routers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, readers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, writers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, last_updated_time=27270.073168096, ttl=10))
+DEBUG:neo4j.pool:[#0000]  _: <POOL> acquire routing connection, access_mode='READ', database='neo4j'
+DEBUG:neo4j.pool:[#0000]  _: <POOL> routing aged?, database=None
+DEBUG:neo4j.pool:[#0000]  _: <ROUTING> purge check: last_updated_time=27268.449867536, ttl=0, perf_time=27270.078811361 => False
+DEBUG:neo4j.pool:[#0000]  _: <POOL> routing aged?, database=neo4j
+DEBUG:neo4j.pool:[#0000]  _: <ROUTING> purge check: last_updated_time=27270.073168096, ttl=10, perf_time=27270.080355347 => False
+DEBUG:neo4j.pool:[#0000]  _: <ROUTING> checking table freshness (readonly=True): table expired=False, has_server_for_mode=True, table routers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))} => True
+DEBUG:neo4j.pool:[#0000]  _: <POOL> using existing routing table RoutingTable(database='neo4j', routers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, readers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, writers={IPv4Address(('79d4aea2.databases.neo4j.io', 7687))}, last_updated_time=27270.073168096, ttl=10)
+DEBUG:neo4j.pool:[#0000]  _: <POOL> acquire address, database='neo4j' address=IPv4Address(('79d4aea2.databases.neo4j.io', 7687))
+DEBUG:neo4j.pool:[#0000]  _: <POOL> trying to hand out new connection
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: 79d4aea2.databases.neo4j.io:7687
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> dns resolver out: 34.126.64.110:7687
+DEBUG:neo4j.io:[#0000]  C: <OPEN> 34.126.64.110:7687
+DEBUG:neo4j.io:[#E7AE]  C: <SECURE> 79d4aea2.databases.neo4j.io
+DEBUG:neo4j.io:[#E7AE]  C: <MAGIC> 0x6060B017
+DEBUG:neo4j.io:[#E7AE]  C: <HANDSHAKE> 0x00060605 0x00020404 0x00000104 0x00000003
+DEBUG:neo4j.io:[#E7AE]  S: <HANDSHAKE> 0x00000605
+DEBUG:neo4j.io:[#E7AE]  C: HELLO {'user_agent': 'neo4j-python/5.25.0 Python/3.12.5-final-0 (linux)', 'routing': {'address': '79d4aea2.databases.neo4j.io:7687'}, 'bolt_agent': {'product': 'neo4j-python/5.25.0', 'platform': 'Linux 5.15.0-122-generic; x86_64', 'language': 'Python/3.12.5-final-0', 'language_details': 'CPython; 3.12.5-final-0 (main, Aug 13 2024 02:17:09) [GCC 10.2.1 20210110]'}}
+DEBUG:neo4j.io:[#E7AE]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+DEBUG:neo4j.io:[#E7AE]  C: LOGON {'scheme': 'basic', 'principal': 'neo4j', 'credentials': '*******'}
+DEBUG:neo4j.io:[#E7AE]  _: <CONNECTION> client state: AUTHENTICATION > READY
+DEBUG:neo4j.io:[#E7AE]  S: SUCCESS {'server': 'Neo4j/5.24-aura', 'connection_id': 'bolt-18516', 'hints': {'connection.recv_timeout_seconds': 60, 'telemetry.enabled': True}}
+DEBUG:neo4j.io:[#E7AE]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+DEBUG:neo4j.io:[#E7AE]  S: SUCCESS {}
+DEBUG:neo4j.io:[#E7AE]  _: <CONNECTION> server state: AUTHENTICATION > READY
+DEBUG:neo4j.pool:[#E7AE]  _: <POOL> released bolt-18516
+
+2024-10-10 21:19:23.891482  None
+
+2024-10-10 21:19:23.891670  Connection to "79d4aea2" succeeded with neo4j+s
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+DEBUG:neo4j.io:[#E7A0]  C: GOODBYE
+DEBUG:neo4j.io:[#E7A0]  C: <CLOSE>
+DEBUG:neo4j.io:[#E7AE]  C: GOODBYE
+DEBUG:neo4j.io:[#E7AE]  C: <CLOSE>

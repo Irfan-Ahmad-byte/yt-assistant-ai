@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: "Home - Simple",
   description: "Page description",
@@ -12,11 +13,11 @@ export default function Home() {
   return (
     <>
       <UrlInput />
-      {/* <div className="flex flex-col justify-between w-full h-full">
-        <ResponseBox />
+      <div className="flex flex-col justify-between w-full h-full">
+        {/* <ResponseBox /> */}
         <TextInput />
-      </div> */}
-      <StreamedResponseComponent />
+      </div>
+      {/* <StreamedResponseComponent /> */}
     </>
   );
 }

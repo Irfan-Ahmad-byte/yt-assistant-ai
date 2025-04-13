@@ -1,16 +1,29 @@
 
-from app.utils.loaders import *
+from typing import List
 from langchain_community.vectorstores.neo4j_vector import Neo4jVector
-import neo4j
+from langchain.docstore.document import Document
 
+from app.utils.loaders import split_docs
+from app.workers.ingester.file_loader import split_into_graph
+from app.workers.ingester.neo4jgraphingestor import Neo4jGraphInjestor
 from config.config import Config
 
 
 
-def create_neo4j_vector_store() -> Neo4jVector:
-    neo4j_uri = Config.NEO4J_URI
-    neo4j_user = Config.NEO4J_USER
-    neo4j_password = Config.NEO4J_PASSWORD
-    neo4j_driver = neo4j.GraphDatabase.driver(neo4j_uri, auth=(neo4j_user, neo4j_password))
+def create_neo4j_vector_store(id: int, docs: str) -> Neo4jVector:
+    docs = Document(
+            page_content=docs,
+            metadata={"source": "local"}
+        )
+    print("Splitting docs..............")
+    docs = split_docs([docs])
+    print("Splitting into graph..............")
+    graph_docs = split_into_graph(docs)
+    print("Ingesting into graph..............")
+    graph_ingester = Neo4jGraphInjestor(graph_docs, str(id), Config)
+    graph = graph_ingester.ingest_documents(str(id))
 
-    return neo4j_driver
+    graph = graph_ingester.ingest_documents(str(id))
+    print("Ingested Docs..............")
+
+    return graph

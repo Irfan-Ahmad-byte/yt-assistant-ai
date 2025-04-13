@@ -1,7 +1,7 @@
 import { Description, Field, Label, Textarea } from '@headlessui/react'
 import clsx from 'clsx'
 
-export default function Example() {
+export default function ResponseBox() {
   return (
     <div className="w-full max-w-full px-7 mt-10 ">
       <Field disabled>

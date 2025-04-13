@@ -1,4 +1,3 @@
-from fastapi import Request
 from fastapi import APIRouter
 from fastapi.responses import StreamingResponse
 
@@ -11,5 +10,5 @@ app = APIRouter()
 
 
 @app.get("/ask")
-def create_user(query: str):
-    return StreamingResponse(get_answer(query), media_type="text/plain")
+def ask(id: int, query: str):
+    return StreamingResponse(get_answer(id, query), media_type="text/plain")

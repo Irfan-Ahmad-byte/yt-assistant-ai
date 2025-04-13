@@ -18,3 +18,11 @@ class Config:
     NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
     NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
     NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
+    ROOT_DIR = os.path.dirname(
+                    os.path.dirname(
+                        os.path.abspath(__file__)
+                    )
+                )
+    
+    TEST_DOC = os.getenv("TEST_DOC", "test.txt")
+    TEST_QUERY = os.getenv("TEST_QUERY", "What is this about?")

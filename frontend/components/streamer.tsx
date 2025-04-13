@@ -9,7 +9,7 @@ const StreamedResponseComponent: React.FC = () => {
 
   const handleStreamResponse = async () => {
     try {
-      const response = await fetch("http://backend-address/agent/ask?query=12hello", {
+      const response = await fetch("http://backend-address/ask?query=12hello", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

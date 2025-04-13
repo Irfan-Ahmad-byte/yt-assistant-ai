@@ -1,0 +1,66 @@
+
+2024-10-10 21:06:38.066416  Neo4j Driver version - 5.25.0
+
+2024-10-10 21:06:38.066598  Attempting to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+s as user "neo4j"
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:06:38.070467  Exception on first try with neo4j+s - Cannot resolve address neo4j+ssc:7687
+
+2024-10-10 21:06:38.070610  Retrying to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+ssc.
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:06:38.071642  Connection to "neo4j+ssc://79d4aea2.databases.neo4j.io" failed with neo4j+ssc as well. Exception: Cannot resolve address neo4j+ssc:7687
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+
+2024-10-10 21:07:17.692903  Neo4j Driver version - 5.25.0
+
+2024-10-10 21:07:17.693023  Attempting to connect to "neo4j+s://79d4aea2.databases.neo4j.io" using neo4j+s as user "neo4j"
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+s', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+s', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+s:7687
+
+2024-10-10 21:07:17.696163  Exception on first try with neo4j+s - Cannot resolve address neo4j+s:7687
+
+2024-10-10 21:07:17.696276  Retrying to connect to "neo4j+s://79d4aea2.databases.neo4j.io" using neo4j+ssc.
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+s', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+s', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+s:7687
+
+2024-10-10 21:07:17.697037  Connection to "neo4j+s://79d4aea2.databases.neo4j.io" failed with neo4j+ssc as well. Exception: Cannot resolve address neo4j+s:7687
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+
+2024-10-10 21:07:37.347998  Neo4j Driver version - 5.25.0
+
+2024-10-10 21:07:37.348129  Attempting to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+s as user "neo4j"
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:07:37.351294  Exception on first try with neo4j+s - Cannot resolve address neo4j+ssc:7687
+
+2024-10-10 21:07:37.351419  Retrying to connect to "neo4j+ssc://79d4aea2.databases.neo4j.io" using neo4j+ssc.
+
+DEBUG:neo4j.pool:[#0000]  _: <POOL> created, routing address IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j:[#0000]  _: <WORKSPACE> resolve home database
+DEBUG:neo4j.pool:[#0000]  _: <POOL> attempting to update routing table from IPv4Address(('neo4j+ssc', 7687))
+DEBUG:neo4j.io:[#0000]  _: <RESOLVE> in: neo4j+ssc:7687
+
+2024-10-10 21:07:37.352218  Connection to "neo4j+ssc://79d4aea2.databases.neo4j.io" failed with neo4j+ssc as well. Exception: Cannot resolve address neo4j+ssc:7687
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
+DEBUG:neo4j.pool:[#0000]  _: <POOL> close
